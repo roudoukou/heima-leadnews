@@ -1,0 +1,12 @@
+### 测试登录
+POST http://localhost:51801/api/v1/login/login_auth
+Content-Type: application/json
+
+{
+  "phone": "13511223455",
+  "password": "12"
+}
+
+<> 2023-12-26T212323.200.json
+<> 2023-12-26T212306.200.json
+
