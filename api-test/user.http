@@ -1,4 +1,4 @@
-### 测试登录
+### 1.测试登录
 POST http://localhost:51801/api/v1/login/login_auth
 Content-Type: application/json
 
@@ -9,4 +9,13 @@ Content-Type: application/json
 
 <> 2023-12-26T212323.200.json
 <> 2023-12-26T212306.200.json
+
+### 2.网关测试登录
+POST http://localhost:51601/user/api/v1/login/login_auth
+Content-Type: application/json
+
+{
+  "phone": "13511223455",
+  "password": "wangwu"
+}
 
