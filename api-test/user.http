@@ -19,3 +19,6 @@ Content-Type: application/json
   "password": "wangwu"
 }
 
+### 3.测试freemarker
+http://localhost:8881/basic
+
