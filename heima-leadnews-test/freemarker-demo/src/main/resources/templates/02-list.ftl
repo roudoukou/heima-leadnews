@@ -18,12 +18,21 @@
         <td>钱包</td>
     </tr>
     <#list stus as stu>
-        <tr>
-            <td>${stu_index + 1}</td>
-            <td>${stu.name}</td>
-            <td>${stu.age}</td>
-            <td>${stu.money}</td>
-        </tr>
+        <#if stu.name='小红'>
+            <tr style="color: red;">
+                <td>${stu_index + 1}</td>
+                <td>${stu.name}</td>
+                <td>${stu.age}</td>
+                <td>${stu.money}</td>
+            </tr>
+        <#else>
+            <tr>
+                <td>${stu_index + 1}</td>
+                <td>${stu.name}</td>
+                <td>${stu.age}</td>
+                <td>${stu.money}</td>
+            </tr>
+        </#if>
     </#list>
 </table>
 <hr>
