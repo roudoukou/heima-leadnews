@@ -17,7 +17,7 @@ public class HelloController {
     public String test(Model model) {
 
         //1.纯文本形式的参数
-        model.addAttribute("name", "freemarker");
+        // model.addAttribute("name", "freemarker");
         //2.实体类相关的参数
         
         Student student = new Student();
@@ -50,7 +50,7 @@ public class HelloController {
         stus.add(stu2);
 
         //向model中存放List集合数据
-        model.addAttribute("stus",stus);
+        // model.addAttribute("stus",stus);
 
         //------------------------------------
 
