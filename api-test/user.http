@@ -22,5 +22,5 @@ Content-Type: application/json
 ### 3.测试freemarker
 http://localhost:8881/basic
 
-### 4.freemarker-list测试
+### 4.freemarker-list-map-测试
 http://localhost:8881/list
