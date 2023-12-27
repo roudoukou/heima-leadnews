@@ -17,6 +17,7 @@
         <td>年龄</td>
         <td>钱包</td>
     </tr>
+    集合大小: ${stus?size}
     <#if stus??>
         <#list stus as stu>
             <#if stu.name='小红'>
@@ -71,6 +72,16 @@
     </#list>
 </table>
 <hr>
+当前时间: ${today?date}
+当前时间: ${today?time}
+当前时间: ${today?datetime}
+当前时间: ${today?string("yyyy年MM月")}
+数值型: ${point}
+数值型: ${point?c}
 
+json转对象
+<#assign text="{'bank':'工商银行','account':'10101920201920212'}" />
+<#assign data=text?eval />
+开户行：${data.bank}  账号：${data.account}
 </body>
 </html>
