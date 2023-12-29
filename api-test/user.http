@@ -24,3 +24,18 @@ http://localhost:8881/basic
 
 ### 4.freemarker-list-map-测试
 http://localhost:8881/list
+
+### 5.APP端文章保存接口
+POST http://localhost:51802/api/v1/article/save
+Content-Type: application/json
+
+{
+	"id1":1390209114747047938,
+    "title":"黑马头条项目背景22222222222222",
+    "authoId":1102,
+    "layout":1,
+    "labels":"黑马头条",
+    "publishTime":"2028-03-14T11:35:49.000Z",
+    "images": "http://192.168.200.130:9000/leadnews/2021/04/26/5ddbdb5c68094ce393b08a47860da275.jpg",
+    "content":"22222222222222222黑马头条项目背景,黑马头条项目背景,黑马头条项目背景,黑马头条项目背景，黑马头条项目背景"
+}
