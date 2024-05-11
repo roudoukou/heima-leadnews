@@ -44,4 +44,13 @@ public class RedisTest {
 
 
     }
+
+    @Test
+    public void testKeys() {
+        Set<String> keys = cacheService.keys("future_*");
+        System.out.println(keys);
+
+        Set<String> scan = cacheService.scan("future_*");
+        System.out.println(scan);
+    }
 }
