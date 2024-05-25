@@ -39,3 +39,63 @@ Content-Type: application/json
     "images": "http://192.168.200.130:9000/leadnews/2021/04/26/5ddbdb5c68094ce393b08a47860da275.jpg",
     "content":"22222222222222222黑马头条项目背景,黑马头条项目背景,黑马头条项目背景,黑马头条项目背景，黑马头条项目背景"
 }
+
+
+### 6.测试 elasticsearch 的分词效果
+GET http://192.168.1.100:9200/_analyze
+Content-Type: application/json
+
+{
+  "analyzer": "ik_max_word",
+  "text": "欢迎来到黑马程序员学习"
+}
+
+
+### 7.创建索引
+PUT http://192.168.1.100:9200/app_info_article
+Content-Type: application/json
+
+{
+  "mappings":{
+    "properties":{
+      "id":{
+        "type":"long"
+      },
+      "publishTime":{
+        "type":"date"
+      },
+      "layout":{
+        "type":"integer"
+      },
+      "images":{
+        "type":"keyword",
+        "index": false
+      },
+      "staticUrl":{
+        "type":"keyword",
+        "index": false
+      },
+      "authorId": {
+        "type": "long"
+      },
+      "authorName": {
+        "type": "text"
+      },
+      "title":{
+        "type":"text",
+        "analyzer":"ik_smart"
+      },
+      "content":{
+        "type":"text",
+        "analyzer":"ik_smart"
+      }
+    }
+  }
+}
+
+### 8.查询索引
+GET http://192.168.1.100:9200/app_info_article
+
+### 9.查询文档
+http://192.168.1.100:9200/app_info_article/_search
+
