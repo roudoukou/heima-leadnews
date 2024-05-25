@@ -7,3 +7,6 @@
 
 配置好linux服务器的minio, redis, nacos
 
+启动nginx
+移动端: http://localhost:8801
+后台: http://localhost:8802

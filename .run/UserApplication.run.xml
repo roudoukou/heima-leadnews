@@ -2,6 +2,7 @@
   <configuration default="false" name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <module name="heima-leadnews-user" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.heima.user.UserApplication" />
+    <option name="VM_PARAMETERS" value="-Xms256m -Xmx256m" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.heima.user.*" />

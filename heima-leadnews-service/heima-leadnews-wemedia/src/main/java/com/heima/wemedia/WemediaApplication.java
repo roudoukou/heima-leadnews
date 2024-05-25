@@ -9,12 +9,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 
 
 @SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan("com.heima.wemedia.mapper")
 @EnableFeignClients(basePackages = "com.heima.apis")
+@EnableAsync
+@EnableScheduling
 public class WemediaApplication {
 
     public static void main(String[] args) {
@@ -27,4 +32,5 @@ public class WemediaApplication {
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return interceptor;
     }
+
 }

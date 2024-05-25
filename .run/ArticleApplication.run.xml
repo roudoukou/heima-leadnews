@@ -2,6 +2,7 @@
   <configuration default="false" name="ArticleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <module name="heima-leadnews-article" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.heima.article.ArticleApplication" />
+    <option name="VM_PARAMETERS" value="-Xms256m -Xmx256m" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.heima.article.*" />
