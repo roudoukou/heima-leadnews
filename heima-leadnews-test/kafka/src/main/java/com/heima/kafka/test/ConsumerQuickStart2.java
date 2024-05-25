@@ -1,4 +1,4 @@
-package com.heima;
+package com.heima.kafka.test;
 
 import org.apache.kafka.clients.consumer.*;
 
